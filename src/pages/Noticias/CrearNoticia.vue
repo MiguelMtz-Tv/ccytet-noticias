@@ -5,7 +5,7 @@
             <a-button type="primary" ghost>Publicar noticia</a-button>
         </div>
     </div>
-    
+
     <div class="w-full">
         <div class="mb-3">Titulo</div>
         <a-input :v-model="titulo" class="w-full mb-4" placeholder="Ingresa el titulo"/>
@@ -20,7 +20,7 @@
           list-type="picture-card"
           @preview="handlePreview"
         >
-          <div v-if="fileList.length < 8">
+          <div v-if="fileList!.length < 8">
             <plus-outlined />
             <div style="margin-top: 8px">Añadir</div>
           </div>
@@ -30,7 +30,7 @@
         </a-modal>
     </div>
 </template>
-  
+
 <script setup lang="ts">
 import { defineModel,  } from 'vue'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
